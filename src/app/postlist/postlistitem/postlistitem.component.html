@@ -1,0 +1,7 @@
+<li [ngClass]="{'list-group-item': true,'list-group-item-success': pLovIts > 0, 'list-group-item-danger': pLovIts < 0 }" >
+    <h4> {{ ptitle }} <div class='pull-right'><em>{{  created_at | date :'dd/MM/yyyy HH:mm'}}</em> </div> <!-- --> </h4>
+    <div>{{ pContent }} </div>
+    <div>Loves -> {{ pLovIts }}</div>
+    <button class="btn btn-success" (click)="dgclincr()">Love It</button>
+    <button class="btn btn-danger"  (click)="dgcldecr()">Don't Lovit</button>
+</li>
